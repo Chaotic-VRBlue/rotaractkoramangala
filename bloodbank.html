@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/dist/assets/index-7de8db6c.css">
+  <link rel="stylesheet" href="bloodbank/index-7de8db6c.css">
 </head>
 
 <body>
@@ -38,9 +38,8 @@
             <span>9957171355</span>
         </div>
         <div class="text-red-500 flex">
-            <span><img src="https://rotaractkoramangala.org/img/icons8-drop-of-blood-48.png" alt="drop"
-                    class="w-6"></span>
-            <span>Blood Bank</span>
+            <span><a href="/rotaractkoramangala/bloodbank.html"><img src="https://rotaractkoramangala.org/img/icons8-drop-of-blood-48.png" alt="drop" class="w-6"></a></span>
+            <span><a href="/rotaractkoramangala/bloodbank.html">Blood Bank</a></span>
         </div>
     </div>
 
@@ -52,19 +51,27 @@
             </div>
             <nav class="main-nav py-12">
                 <ul class="flex justify-end space-x-10 bg-gray-300 py-2 rounded-2xl">
-                    <li class="py-2">Home</li>
-                    <li class="py-2">About</li>
-                    <li class="py-2">Showcase</li>
-                    <li class="py-2">Events</li>
-                    <li class="py-2">Calender</li>
-                    <li class="py-2">Join Us</li>
-                    <li class="py-2">Contact</li>
+                    <li class="py-2"><a href="/rotaractkoramangala/index.html"> Home</a></li>
+                    <li class="py-2"><a href="/rotaractkoramangala/about.html">About</a></li>
+                    <li class="py-2"><a href="/rotaractkoramangala/showcase.html">Showcase</a></li>
+                    <li class="py-2"><a href="/rotaractkoramangala/events.html">Events</a></li>
+                    <li class="py-2"><a href="/rotaractkoramangala/calander.html">Calender</a></li>
+                    <li class="py-2"><a href="/rotaractkoramangala/joinus.html">Join Us</a></li>
+                    <li class="py-2"><a href="/rotaractkoramangala/contact.html">Contact</a></li>
                     <li class="pr-7 text-center bg-green-600 rounded-3xl text-white py-2 px-6">Donate</li>
                     <li class="py-2"></li>
                 </ul>
             </nav>
         </div>
     </div>
+    <!-- my code end -->
+
+
+
+
+
+
+
 
     <section>
         <div class="ml-96 mr-44">
@@ -75,15 +82,14 @@
             <table id="myTable" class="space-x-14 mt-3">
                 <thead>
                     <tr>
-                        <th onclick="sortTable(0)"><span>Click to sort</span><br><span class="text-xl">Blood Group
-                            </span></th>
-                        <th onclick="sortTable(1)"><span>Click to sort</span><br><span class="text-xl">Donar
-                                Location</span></th>
+                        <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                        <th onclick="sortTable(0)"><span>Click to sort</span><br><span class="text-xl">Blood Group </span></th>
+                        <th onclick="sortTable(1)"><span>Click to sort</span><br><span class="text-xl">Donar Location</span></th>
                         <th><span class="text-xl">Name</span></th>
                         <th><span class="text-xl">Phone</span></th>
                     </tr>
                 </thead>
-
+                
                 <tbody>
                     <tr>
                         <td>B+</td>
@@ -530,6 +536,7 @@
         </div>
     </section>
 
+    
     <section>
         <div class="flex mb-10 pt-16">
             <div class="float-left ml-96 last-img-blk">
@@ -606,8 +613,7 @@
                 class="text-orange-600 font-semibold">ICS</a>
         </div>
     </section>
-
-
+    
     <script>
         const searchInput = document.getElementById("search");
         const rows = document.querySelectorAll("tbody tr");
