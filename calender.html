@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contact Rotaract Club Koramangala In Bangalore | Rotaract Koramangala</title>
+    
+    <title>Calendar Rotaract Club of Koramangala - Rotaract Bangalore | Rotaract Koramangala</title>
     <script src="https://kit.fontawesome.com/a42dc409b0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-  <link rel="stylesheet" href="joinus/index-be307a58.css">
+  <link rel="stylesheet" href="calender/index-a734f03c.css">
 </head>
 
 <body>
@@ -67,46 +66,13 @@
         </div>
     </div>
 
-    <section class="mb-9">
-        <h2 class="text-center text-3xl mb-10">Join Rotaract Koramangala</h2>
-        <form action="#" onsubmit="sendEmail(); reset(); return false;">
-            <div class="flex flex-col centering space-y-8">
-                <div></div>
-                <div>
-                    <input id="name" class="int border-2 border-gray-400 text-xl pl-4" type="text" placeholder='Full Name *'
-                        required>
-                </div>
-                <div class="space-y-8 sm:space-x-8">
-                    <input id="email" class="half-int border-2 border-gray-400 text-xl pl-4" type="text" placeholder='Email ID *'
-                        required>
-                    <input id="number" class="half-int border-2 border-gray-400 text-xl pl-4" type="text"
-                        placeholder='Phone Number *' required>
-                </div>
-                <div class="space-y-8 sm:space-x-8">
-                    <select id="gender" class="half-int border-2 border-gray-400 text-xl pl-4" required>
-                        <option value="" disabled selected hidden>Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                    <input id="age" class="half-int border-2 border-gray-400 text-xl pl-4" type="text" placeholder='Your Age *'
-                        required>
-                </div>
-                <div>
-                    <textarea id="details" class="huge-one border-2 border-gray-400 text-xl pl-4" name="entry.86024434"
-                        id="work-college" cols="30" rows="4" placeholder='Working/Student? Where?
-Please add details of your work place or school/college *' required></textarea>
-                </div>
-                <div>
-                    <textarea id="address" class="small-one border-2 border-gray-400 text-xl pl-4" cols="30" rows="3"
-                        placeholder='Your Current Address  *' required></textarea>
-                </div>
-                <div>
-                    <textarea id="join" class="small-one border-2 border-gray-400 text-xl pl-4" cols="30" rows="3"
-                        placeholder='Why do you want to join rotaract? *' required></textarea>
-                </div>
-                <button class="focus-grad w-40 h-12 text-white" type="submit" onclick="sendEmail()"><B>SEND MESSAGE</B></button>
-            </div>
-        </form>
+    <section class="cal-size pb-5 ml-3 sm:ml-96">
+        <div>
+            <h2 class="text-center text-4xl mb-12">Rotaract Koramangala Calendar</h2>
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FKolkata&amp;src=cmNrb3JhbWFuZ2FsYUBnbWFpbC5jb20&amp;color=%23227F63&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=1&amp;showTz=1&amp;showNav=1&amp;showTitle=0"
+                style="border-width:0" width="100%" height="750" frameborder="0" scrolling="no"></iframe>
+        </div>
     </section>
 
     <section>
@@ -185,30 +151,4 @@ Please add details of your work place or school/college *' required></textarea>
                 class="text-orange-600 font-semibold">ICS</a>
         </div>
     </section>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "pdiv416@gmail.com",
-                Password: "71E0E4C1F67DC691DF9CBBB7573839051C90",
-                To: 'vrohithkattimani@gmail.com',
-                From: "pdiv416@gmail.com",
-                Subject: "New Joining",
-                Body: "Full Name: " + document.getElementById("name").value 
-                + "<br> Email ID: " + document.getElementById("email").value
-                + "<br> Phone Number: " + document.getElementById("number").value
-                + "<br> Gender: " + document.getElementById("gender").value
-                + "<br> Your Age: " + document.getElementById("age").value
-                + "<br> Working/Student Details: " + document.getElementById("details").value
-                + "<br> Current Adress: " + document.getElementById("address").value
-                + "<br> Why do I want to Join: " + document.getElementById("join").value
-            }).then(
-                message => alert(message)
-            );
-        }
-    </script>
 </body>
-
-</html>

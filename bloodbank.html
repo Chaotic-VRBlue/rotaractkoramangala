@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -21,12 +21,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="bloodbank/index-7de8db6c.css">
+    
+  <link rel="stylesheet" href="bloodbank/index-c5e58513.css">
 </head>
 
 <body>
-    <div class="grid grid-cols-3 place-items-center h-11 text-white px-44 bg-black">
-        <div class="space-x-1">
+    <div class="grid grid-cols-3 place-items-center h-11 text-white sm:px-44 bg-black">
+        <div class="sm:space-x-1">
             <span><i class="fa fa-facebook-f"></i></span>
             <span><i class="fa fa-twitter-square"></i></span>
             <span><i class="fa fa-instagram"></i></span>
@@ -38,58 +39,59 @@
             <span>9957171355</span>
         </div>
         <div class="text-red-500 flex">
-            <span><a href="/rotaractkoramangala/bloodbank.html"><img src="https://rotaractkoramangala.org/img/icons8-drop-of-blood-48.png" alt="drop" class="w-6"></a></span>
+            <span><a href="/rotaractkoramangala/bloodbank.html"><img
+                        src="https://rotaractkoramangala.org/img/icons8-drop-of-blood-48.png" alt="drop"
+                        class="w-6"></a></span>
             <span><a href="/rotaractkoramangala/bloodbank.html">Blood Bank</a></span>
         </div>
     </div>
 
 
-    <div class="bg-white pt-6 h-52">
+    <div id="rexp" class="bg-white sm:pt-6 h-52">
         <div>
-            <div class="float-left ml-96">
+            <div class="float-left ml-3 sm:ml-96 mt-10 sm:mt-0">
                 <img src="https://rotaractkoramangala.org/img/logo-small.png" alt="logo">
             </div>
             <nav class="main-nav py-12">
-                <ul class="flex justify-end space-x-10 bg-gray-300 py-2 rounded-2xl">
-                    <li class="py-2"><a href="/rotaractkoramangala/index.html"> Home</a></li>
-                    <li class="py-2"><a href="/rotaractkoramangala/about.html">About</a></li>
-                    <li class="py-2"><a href="/rotaractkoramangala/showcase.html">Showcase</a></li>
-                    <li class="py-2"><a href="/rotaractkoramangala/events.html">Events</a></li>
-                    <li class="py-2"><a href="/rotaractkoramangala/calander.html">Calender</a></li>
-                    <li class="py-2"><a href="/rotaractkoramangala/joinus.html">Join Us</a></li>
-                    <li class="py-2"><a href="/rotaractkoramangala/contact.html">Contact</a></li>
-                    <li class="pr-7 text-center bg-green-600 rounded-3xl text-white py-2 px-6">Donate</li>
-                    <li class="py-2"></li>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul id="ul-res" class="sm:flex sm:justify-end sm:space-x-10 sm:bg-gray-300 sm:py-2 sm:rounded-2xl">
+                    <li class="sm:py-2"><a class="active" href="/rotaractkoramangala/index.html"> Home</a></li>
+                    <li class="sm:py-2"><a href="/rotaractkoramangala/about.html">About</a></li>
+                    <li class="sm:py-2"><a href="/rotaractkoramangala/showcase.html">Showcase</a></li>
+                    <li class="sm:py-2"><a href="/rotaractkoramangala/events.html">Events</a></li>
+                    <li class="sm:py-2"><a href="/rotaractkoramangala/calander.html">Calender</a></li>
+                    <li class="sm:py-2"><a href="/rotaractkoramangala/joinus.html">Join Us</a></li>
+                    <li class="sm:py-2"><a href="/rotaractkoramangala/contact.html">Contact</a></li>
+                    <li class="res-don pr-7 text-center bg-green-600 rounded-3xl text-white py-2 px-6"><a
+                            href="#donate">Donate</a></li>
+                    <li class="sm:py-2"></li>
                 </ul>
             </nav>
         </div>
     </div>
-    <!-- my code end -->
-
-
-
-
-
-
 
 
     <section>
-        <div class="ml-96 mr-44">
-            <h1 style="text-align: center" class="pb-5">Donors Database </h1>
+        <div class="sm:ml-96 sm:mr-44">
+            <h1 style="text-align: center" class="pb-5 font-bold text-4xl">Donors Database </h1>
             <input type="text" name="search" id="search" onkeyup="myFunction()" placeholder="Search for Blood group.."
                 title="Search for Blood group" class="srch border-2">
 
             <table id="myTable" class="space-x-14 mt-3">
                 <thead>
                     <tr>
-                        <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                        <th onclick="sortTable(0)"><span>Click to sort</span><br><span class="text-xl">Blood Group </span></th>
-                        <th onclick="sortTable(1)"><span>Click to sort</span><br><span class="text-xl">Donar Location</span></th>
+                        <th onclick="sortTable(0)"><span>Click to sort</span><br><span class="text-xl">Blood Group
+                            </span></th>
+                        <th onclick="sortTable(1)"><span>Click to sort</span><br><span class="text-xl">Donar
+                                Location</span></th>
                         <th><span class="text-xl">Name</span></th>
                         <th><span class="text-xl">Phone</span></th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     <tr>
                         <td>B+</td>
@@ -536,23 +538,23 @@
         </div>
     </section>
 
-    
     <section>
-        <div class="flex mb-10 pt-16">
-            <div class="float-left ml-96 last-img-blk">
-                <img src="https://rotaractkoramangala.org/img/logo-small.png" alt="logo">
-                <h5 class="my-2">Rotaract Club of Koramangala</h5>
-                <p class="text-gray-500">Rotaract Club of Koramangala is a community based club of youngsters (18 to 30
+        <div class="flex flex-wrap mb-10 mt-16">
+            <div class="float-left sm:ml-80 last-img-blk">
+                <img src="https://rotaractkoramangala.org/img/logo-small.png" alt="logo" class="ml-36 sm:ml-0">
+                <h5 class="my-2 text-center font-semibold sm:text-left">Rotaract Club of Koramangala</h5>
+                <p class="text-gray-500 mx-5 sm:mx-0 text-center sm:text-left">Rotaract Club of Koramangala is a
+                    community based club of youngsters (18 to 30
                     years of age).We organize and participate in projects with an aim to create a change in the society.
                 </p>
             </div>
 
 
-            <div class="ml-4 pl-2 w-96">
-                <h4 class="text-xl font-bold mb-8">Menu</h4>
-                <div class="flex">
-                    <div class="w-40 text-gray-500">
-                        <ul class="space-y-2">
+            <div class="ml-20 mr-20 sm:mr-0 pl-2 w-96 mt-10 sm:mt-0">
+                <h4 class="text-xl font-bold mb-4 sm:mb-8 text-center sm:text-left text-gray-800">Menu</h4>
+                <div id="foot-font" class="flex flex-wrap">
+                    <div class="w-56 sm:w-40 text-gray-500 text-center sm:text-left">
+                        <ul class="space-y-3">
                             <li>Home</li>
                             <li>About Us</li>
                             <li>Showcase</li>
@@ -560,8 +562,8 @@
                             <li>Calender</li>
                         </ul>
                     </div>
-                    <div class="w-40 pl-2 text-gray-500">
-                        <ul class="space-y-2">
+                    <div class="w-56 sm:w-40 text-gray-500 mt-3 sm:mt-0 text-center sm:text-left">
+                        <ul class="space-y-3">
                             <li>Join Us</li>
                             <li>Videos</li>
                             <li>Master Brand</li>
@@ -573,10 +575,10 @@
 
 
             <div>
-                <div>
-                    <h4 class="text-xl font-bold mb-8">Contact Us</h4>
+                <div class="ml-20 sm:ml-16 text-center sm:text-left mt-10 sm:mt-0">
+                    <h4 class="text-xl font-bold mb-4 sm:mb-8 text-center sm:text-left text-gray-700">Contact Us</h4>
 
-                    <div class="flex text-gray-500 space-x-1">
+                    <div class="flex text-gray-500 space-x-1 justify-center sm:justify-start">
                         <div class="social-ico flex justify-center items-center">
                             <a href="https://www.facebook.com/RotaractKoramangala" target="_blank"><i
                                     class="fa-brands fa-facebook-f"></i></a>
@@ -599,21 +601,25 @@
                         </div>
                     </div>
 
-                    <p class="mt-5 mb-3"><i class="fa-regular fa-envelope"></i> info@rotaractkoramangala.org</p>
-                    <p class="mb-4"><i class="fa-regular fa-mobile-notch"></i> +91-99571-71355</p>
-                    <button class="focus-grad rounded-3xl w-40 h-12 text-white">Contact</button>
+                    <p class="mt-5 mb-3 text-gray-500"><i class="fa-regular fa-envelope"></i>
+                        info@rotaractkoramangala.org</p>
+                    <p class="mb-4 text-gray-500"><i class="fa-regular fa-mobile-notch"></i> +91-99571-71355</p>
+                    <button class="focus-grad rounded-3xl w-40 h-12 text-white"><a
+                            href="/rotaractkoramangala/contact.html">Contact</a></button>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="h-11 last-col flex justify-center items-center text-white">
+        <div class="h-16 sm:h-11 last-col pt-2 text-center text-gray-400">
             Copyright © 2019. All rights reserved | Developed by&nbsp; <a href="https://icsoln.com/" target="_blank"
                 class="text-orange-600 font-semibold">ICS</a>
         </div>
     </section>
-    
+    </section>
+
+
     <script>
         const searchInput = document.getElementById("search");
         const rows = document.querySelectorAll("tbody tr");
@@ -626,8 +632,7 @@
                     : (row.style.display = "none");
             });
         });
-        
-        
+
         th = document.getElementsByTagName('th');
 
         for (let c = 0; c < th.length; c++) {
